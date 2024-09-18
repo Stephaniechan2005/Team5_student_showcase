@@ -11,10 +11,13 @@ Couples Resort Responsive Build
  */
 
 /* 1. ---General Styles--- */
-
 body {
   color: #626262;
   font-family: "Sanchez", "Times New Roman", serif;
+}
+
+h2 {
+  color:#c9261a;
 }
 
 a {
@@ -30,6 +33,14 @@ textarea {
 }
 
 /* 2. ---Main Nav--- */
+
+#sticky-nav-con {
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: solid 1px #c3c3c3;
+  z-index: 1;
+}
 
 #main-nav button {
   width: 20px;
@@ -56,7 +67,7 @@ textarea {
 }
 
 #main-nav ul li a:hover {
-  color: #9a2018;
+  color:#c9261a;
 }
 
 #main-nav ul {
@@ -69,11 +80,12 @@ textarea {
   display: block;
   padding: 10px 0 10px 0;
   text-align: center;
-  color: #626262;
+  color: #efefef;
 }
 
 #main-nav ul li {
   border-bottom: 1px solid #efefef;
+  
 }
 
 #main-nav ul li:first-child {
@@ -89,15 +101,26 @@ textarea {
   max-width: 280px;
 }
 
+/* 3. ---Main hero--- */
+
+/* 4. ---Industrial Details--- */
+
+/* 5. ---Fanshawe Industrial Video--- */
+
+/* 6. ---Winning Projects--- */
+
+/* 7. ---Testimonials--- */
+#testimonial {
+  background-color:#efefef;
+  display: block;
+}
 
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
-  #sticky-nav-con {
-    position: sticky;
-    top: 0px;
-    background-color: #fff;
-    border-bottom: solid 1px #c3c3c3;
-    z-index: 1;
+
+  #main-header {
+    height: 100px;
+    background: rgba(0, 0, 0, 0.9);
   }
 
   #main-nav {
@@ -118,6 +141,8 @@ textarea {
   #burger-con {
     display: block;
     font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   #burger-con ul li,
