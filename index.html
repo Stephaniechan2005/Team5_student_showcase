@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/grid.css" rel="stylesheet" />
 
@@ -60,7 +57,11 @@
     <section id="player-container">
       <div class="grid-con">
         <div class="col-span-full m-col-span-full l-col-span-full">
-          <video controls preload="metadata" poster="images/placeholder.jpg">
+          <video
+            class="player"
+            preload="metadata"
+            poster="images/placeholder.jpg"
+          >
             <source src="video/video.mp4" type="video/mp4" />
             <source src="video/video.webm" type="video/webm" />
             <p>
@@ -68,29 +69,6 @@
               have javascript disabled.
             </p>
           </video>
-          <div class="video-controls hidden" id="video-controls">
-            <button id="play-button">
-              <i class="fa fa-play-circle-o"></i>
-            </button>
-            <button id="pause-button">
-              <i class="fa fa-pause-circle-o"></i>
-            </button>
-            <button id="stop-button">
-              <i class="fa fa-stop-circle-o"></i>
-            </button>
-            <i class="fa fa-volume-up"></i>
-            <input
-              type="range"
-              id="change-vol"
-              step="0.05"
-              min="0"
-              max="1"
-              value="1"
-            />
-            <button id="full-screen">
-              <i class="fa fa-arrows-alt"></i>
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -224,7 +202,7 @@
         <p id="price-policy">&copy; Fanshawe College. All rights reserved.</p>
       </div>
     </footer>
-
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

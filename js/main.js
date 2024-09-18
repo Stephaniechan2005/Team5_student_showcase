@@ -62,3 +62,6 @@ function displayTestimonial(testimonialCon, testimonial) {
 displayTestimonial(testimonialCon1, testimonials[0]);
 displayTestimonial(testimonialCon2, testimonials[1]);
 displayTestimonial(testimonialCon3, testimonials[2]);
+
+//video
+const player = new Plyr("video");
