@@ -886,6 +886,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   #main-header {
     height: 110px;
+    background: rgba(0, 0, 0, .9);
   }
 
   #main-nav {
@@ -897,6 +898,8 @@ textarea {
   #burger-con {
     font-size: 16px;
     margin-top: 28px;
+    display: flex;
+    justify-content: flex-end;  
   }
 
   #burger-con ul li {
