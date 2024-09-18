@@ -7,23 +7,10 @@ Couples Resort Responsive Build
     CSS Guide
 
     1.  General Styles
-    2.  Main Nav
-    3.  Main Hero Image
-    4.  Main Hero Image Contact
-    5.  Why Couples Resort
-    6.  About & FAQ
-    7.  Contact Form
-    8.  Footer
+  
  */
 
 /* 1. ---General Styles--- */
-
-#mobile-outline {
-  outline: 20px solid #333;
-  max-width: 412px;
-  margin: 20px auto 20px auto;
-  border-radius: 10px;
-}
 
 body {
   color: #626262;
@@ -101,31 +88,6 @@ textarea {
   margin-bottom: 20px;
   max-width: 280px;
 }
-
-/* 3. ---Main Hero Image--- */
-
-#hero img {
-  grid-column: 1/-1;
-  grid-row: 1/1;
-  justify-self: center;
-}
-
-#hero-main {
-  height: 220px;
-  object-fit: cover;
-}
-
-#hero .grid-con {
-  /* Telling this grid to live in the middle column */
-  grid-column: 2/3;
-  /* also telling it stay in the first row, so it overlaps the hero image */
-  grid-row: 1/1;
-  /* get rid of margin 0 auto from the original class */
-  margin: 0;
-}
-
-
-/* 8. ---Footer--- */
 
 
 /* ---Tablet Library Grid Styles--- */
