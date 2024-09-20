@@ -146,6 +146,14 @@ textarea {
 }
 
 /* 5. ---Fanshawe Industrial Video--- */
+:root {
+  /* psuedo class */
+  --plyr-color-main: #c9261a;;
+  --plyr-control-icon-size: 20px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: Helvetica, Arial, sans-serif;
+  --plyr-control-spacing: 15px;
+}
 
 
 /* 6. ---Winning Projects--- */
@@ -199,6 +207,20 @@ textarea {
 }
 
 /* 8. ---Program Introduction--- */
+#program-introduction-mid button {
+  background-color: #c9261a;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  width: 95px;
+  height: 35px;
+  margin-top: 15px;
+}
+
+#program-introduction-mid button:hover {
+  background-color: #a81e15;
+  transform: translateY(-2px); 
+}
 
 /* 9. ---Portfolios--- */
 #portfolio-con {
@@ -235,6 +257,20 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+#button-load {
+  text-align: center;
+  padding-bottom: 40px;
+  
+}
+
+#button-load button {
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #c0c0c0;
+  
+}
 /* 10. ---footer--- */
 #footer-hero {
   top: 0;
@@ -273,12 +309,59 @@ textarea {
   padding: 15px;
 }
 
+#winning-projects-img {
+  text-align: center;
+}
+
 #winning-projects-img-2 img {
   margin-bottom: 20px;
 }
 
 #industrial-night-left {
   margin-bottom: 20px;
+}
+
+
+#program-introduction-con {
+  margin: 45px 0;
+}
+
+#program-introduction-img2 {
+  display: none;
+}
+
+#program-introduction-img3 {
+  display: none;
+}
+
+#program-introduction-mid {
+  margin: 60px 10px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+#program-introduction-mid h2 {
+  margin-bottom: 20px;
+}
+
+#program-introduction-mid p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+#program-introduction-mid button {
+  background-color: #c9261a;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  width: 95px;
+  height: 35px;
+  margin-top: 15px;
+}
+
+#program-introduction-mid button:hover {
+  background-color: #a81e15;
+  transform: translateY(-2px); 
 }
 
 #portfolio-box1,
@@ -365,6 +448,43 @@ textarea {
     padding-right: 40px;
   }
 
+  #program-introduction-con {
+    margin: 45px 0;
+  }
+
+  #program-introduction-img2 {
+    display: none;
+  }
+
+  #program-introduction-img3 {
+    display: none;
+  }
+
+  #program-introduction-mid {
+    margin: 60px 10px;
+    text-align: center;
+  }
+
+  #program-introduction-mid h2 {
+    margin-bottom: 20px;
+  }
+  
+  #program-introduction-mid p {
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+
+  #program-introduction-mid button {
+    background-color: #c9261a;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    width: 95px;
+    height: 35px;
+    margin-top: 15px;
+  }
+
+
   #poster {
     height: 450px; /* Adjust height for tablets or medium screens */
   }
@@ -429,8 +549,72 @@ textarea {
     margin-top: 30px;
   }
 
-    #footer-logo-info2 p {
+  #program-introduction-con {
+    padding-bottom: 410px;
+  }
+
+  #program-introduction {
+    display: block;
+  }
+
+  #program-introduction-img1 {
+    position: absolute;
+    left: 45%;
+  } 
+  
+  #program-introduction-img2 {
+    display: block;
+    position: relative;
+    top: 400px;
+  }
+  
+  #program-introduction-img3 {
+    display: block;
+    position: absolute;
+    left: 75%;
+  }
+
+  #program-introduction-img4 {
+    display: block;
+    position: absolute;
+    left: 200px;
+    top: 3250px;
+  }
+  
+
+  #program-introduction-mid {
+    margin: 0 400px;
+    text-align: center;
+    padding: 0 90px;
+  }
+  
+  #program-introduction-mid h2 {
+    margin-bottom: 30px;
+  }
+  
+  #program-introduction-mid p {
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 25px;;
+  }
+  
+  #program-introduction-mid button {
+    background-color: #c9261a;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    width: 95px;
+    height: 35px;
+    margin-top: 15px;
+  }
+  
+  #program-introduction-mid button:hover {
+    background-color: #a81e15;
+    transform: translateY(-2px); 
+  }
+
+  #footer-logo-info2 p {
       font-size: 16px;
       line-height: 25px;
-    }
+  }
 }
