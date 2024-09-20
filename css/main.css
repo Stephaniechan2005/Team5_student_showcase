@@ -7,7 +7,18 @@ Couples Resort Responsive Build
     CSS Guide
 
     1.  General Styles
-  
+    2.  Main Nav
+    3.  Main Hero
+    4.  Industrial Night Details
+    5.  Fanshawe Industrial Video
+    6.  Winning Projects
+    7.  Testimonials
+    8.  Program introduction
+    9.  Portfolios
+    10. Footer
+    11. Mobile Library Grid Style
+    12. Tablet Library Grid Styles
+    13. Desktop Library Grid Styles
  */
 
 /* 1. ---General Styles--- */
@@ -37,9 +48,15 @@ textarea {
 #sticky-nav-con {
   position: sticky;
   top: 0px;
-  background-color: #fff;
-  border-bottom: solid 1px #c3c3c3;
+  /* border-bottom: solid 1px #c3c3c3; */
   z-index: 1;
+  background-color: rgb(18, 18, 18);
+
+}
+
+#logo {
+  position: relative;
+  top: -10px;
 }
 
 #main-nav button {
@@ -102,34 +119,208 @@ textarea {
 }
 
 /* 3. ---Main hero--- */
+#poster {
+  background-image: url(../images/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Ensures the image covers the container */
+  height: 600px; /* Default height for larger screens */
+  object-fit: cover;
+}
 
 /* 4. ---Industrial Details--- */
+#industrial-night {
+  margin-top: 45px;
+}
+
+#industrial-night-left h2 {
+  margin-bottom: 15px;
+}
+
+#industrial-night-left p {
+  margin-bottom: 5px;
+}
+
+#explaination {
+  margin-top: 30px;
+}
 
 /* 5. ---Fanshawe Industrial Video--- */
 
+
 /* 6. ---Winning Projects--- */
+#winning-projects-img h2 {
+  margin-bottom: 45px;
+  margin-top: 45px;
+}
+
+#winning-projects-img img {
+  margin-bottom: 35px;
+}
+
+#winning-projects-img img,
+#winning-projects-img-2 img {
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* 7. ---Testimonials--- */
 #testimonial {
   background-color:#efefef;
   display: block;
+  margin-top: 55px;
+  padding-bottom: 55px;
+}
+
+#testimonial-h2 {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#testimonial-box {
+  display: grid;
+}
+
+#testimonial-con1,
+#testimonial-con2,
+#testimonial-con3 {
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#testimonial-con1 h3,
+#testimonial-con2 h3,
+#testimonial-con3 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* 8. ---Program Introduction--- */
+
+/* 9. ---Portfolios--- */
+#portfolio-con {
+  background-color:#efefef;
+}
+
+#portfolio-con #portfolio img {
+  border-radius: 15px;
+}
+
+#portfolio {
+  text-align: center;
+}
+
+#portfolio-h2 {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#portfolio-box1,
+#portfolio-box2,
+#portfolio-box3,
+#portfolio-box4,
+#portfolio-box5,
+#portfolio-box6,
+#portfolio-box7,
+#portfolio-box8,
+#portfolio-box9,
+#portfolio-box10 {
+  background-color: #fff;
+  border-radius: 15px;
+  object-fit: fill;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 10. ---footer--- */
+#footer-hero {
+  top: 0;
+  background-color: #c9261a;
+  color: #fff;
+}
+
+#footer-logo-info2 {
+  text-align: right;
+}
+
+/* #footer-logo-info2 p {
+  position: relative;
+  top: 35%;
+  line-height: 20px;
+} */
+
+/* ---Mobile Library Grid Style--- */
+@media screen and (min-width: 480px) {
+
+  #logo {
+    position: relative;
+    top: 10px;
+  }
+
+  #poster {
+    height: 200px; /* Further reduce height for very small screens */
+  }
+
+  #testimonial-con1,
+  #testimonial-con2,
+  #testimonial-con3 {
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px;
+}
+
+#winning-projects-img-2 img {
+  margin-bottom: 20px;
+}
+
+#industrial-night-left {
+  margin-bottom: 20px;
+}
+
+#portfolio-box1,
+#portfolio-box2,
+#portfolio-box3,
+#portfolio-box4,
+#portfolio-box5,
+#portfolio-box6,
+#portfolio-box7,
+#portfolio-box8,
+#portfolio-box9,
+#portfolio-box10 {
+  margin-bottom: 40px;
+}
+
+#footer-logo-info2 p {
+  font-size: 10px;
+  position: relative;
+  top: 30%;
+}
+
 }
 
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
 
   #main-header {
-    height: 100px;
-    background: rgba(0, 0, 0, 0.9);
+    height: 90px;  
   }
 
+
   #main-nav {
-    margin-top: 4%;
+    margin-top: 3%;
     margin-bottom: 4%;
-    border-left: 2px solid #707070;
     padding-left: 30px;
   }
 
+  #logo {
+    position: relative;
+    top: -15px;
+  }
+  
   #main-nav ul li a {
     display: inline;
   }
@@ -152,16 +343,34 @@ textarea {
   }
 
   #burger-con ul li {
-    margin-right: 10px;
+    margin-right: 30px;
+    font-size: 19px;
   }
 
   #burger-con ul li:last-child {
-    margin-right: 0px;
+    margin-right: px;
   }
 
   #logo {
-    margin-top: 32px;
+    margin-top: 39px;
     order: -1;
+  }
+
+  #industrial-night-left {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  #video {
+    padding-right: 40px;
+  }
+
+  #poster {
+    height: 450px; /* Adjust height for tablets or medium screens */
+  }
+
+  #footer-logo-info2 p {
+    font-size: 12px;
   }
 }
   /* hero-main */
@@ -170,24 +379,58 @@ textarea {
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
   #main-header {
-    height: 110px;
-    background: rgba(0, 0, 0, 0.9);
+    height: 110px;  
   }
 
   #main-nav {
-    margin-top: 2%;
+    margin-top: 1.5%;
     margin-bottom: 2%;
     margin-left: 25px;
+  }
+
+  #logo {
+    position: relative;
+    top: -15px;
   }
 
   #burger-con {
     font-size: 16px;
     margin-top: 28px;
-    display: flex;
-    justify-content: flex-end;
   }
 
   #burger-con ul li {
-    margin-right: 25px;
+    margin-right: 65px;
+    font-size: 22px;
   }
+
+  #burger-con ul li:last-child {
+    margin-right: 10px;
+  }
+
+  #industrial-night-left {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  #video {
+    padding-right: 40px;
+  }
+  
+  #industrial-night-left h2 {
+    margin-bottom: 15px;
+  }
+
+  #industrial-night-left p {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  #explaination {
+    margin-top: 30px;
+  }
+
+    #footer-logo-info2 p {
+      font-size: 16px;
+      line-height: 25px;
+    }
 }
