@@ -14,10 +14,10 @@
     <!-- Main Nav -->
     <div id="sticky-nav-con">
       <header class="grid-con" id="main-header">
-        <div id="logo" class="col-start-3 col-end-4 m-col-start-1 m-col-end-4">
+        <div id="logo" class="col-start-1 col-end-3 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4 xl-col-start-1 xl-col-end-4">
           <img src="images/Fanshawe_logo.svg" alt="Fanshawe Logo" />
         </div>
-        <nav id="main-nav" class="col-span-full m-col-start-4 m-col-end-11">
+        <nav id="main-nav" class="col-start-5 col-end-6 m-col-start-4 m-col-end-13 l-col-start-4 l-col-end-13 xl-col-start-4 xl-col-end-13">
           <button id="button"></button>
           <div id="burger-con">
             <h2 class="hidden">Main Nav</h2>
@@ -32,82 +32,80 @@
     </div>
     <!-- Main Hero / change the name of id -->
     <!-- Header Parallax -->
-    <div id="parallax-con">
-      <div id="parallax-header-con" class="grid-con">
-        <div id="poster" class="col-span-full m-col-span-full l-col-span-full">
-          <img src="images/header.png" alt="header Image" />
-          <!-- should replace with parallax-->
-        </div>
+    <div id="parallax-con" class="grid-con">
+      <div id="poster" class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+        <!-- should replace with parallax-->
       </div>
     </div>
 
     <!-- Industrial Night Details -->
-    <section id="industrial-night-details">
-      <div class="grid-con">
-        <div class="">
+    <section id="industrial-night">
+      <div id="industrial-night-details" class="grid-con">
+        <div id="industrial-night-left" class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
           <h2>Industry Night</h2>
-          <p>Date:</p>
-          <p>Time:</p>
-          <p>Location:</p>
+          <b><p>Date:</p></b> Oct 2nd, 2024
+          <b><p>Time:</p></b> EST 17:00 PM
+          <b><p>Location:</p></b> Fanshawe College Downtown Campus
+          <p id="explaination">
+            The SDPA Industry Night for 2023 will showcase student projects and activities from the Interactive Media Design Program.
+            We extend a cordial invitation to an evening of professional engagement, featuring the presentation of Capstone Projects for Foundation Sixty6 and Student Portfolios. Attendees will have the opportunity to peruse and discuss the showcased work while enjoying a selection of catered food and refreshments.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Fanshawe Industrial Video -->
-    <section id="player-container">
-      <div class="grid-con">
-        <div class="col-span-full m-col-span-full l-col-span-full">
-          <video
-            class="player"
-            preload="metadata"
-            poster="images/placeholder.jpg"
-          >
-            <source src="video/video.mp4" type="video/mp4" />
-            <source src="video/video.webm" type="video/webm" />
-            <p>
-              Oops, something went wrong. You may be using a outdated browser or
-              have javascript disabled.
-            </p>
-          </video>
+        <div id="video" class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
+          <!-- Fanshawe Industrial Video -->
+          <section id="player-container">
+            <div class="col-start-3 col-end-5 m-col-start-6 m-col-end-13 l-col-start-7 l-col-end-13">
+              <video
+                class="player"
+                preload="metadata"
+                poster="images/placeholder.jpg"
+              >
+                <source src="video/video.mp4" type="video/mp4" />
+                <source src="video/video.webm" type="video/webm" />
+                <p>
+                  Oops, something went wrong. You may be using a outdated browser or
+                  have javascript disabled.
+                </p>
+              </video>
+            </div>
+        </section>
         </div>
       </div>
     </section>
 
     <!-- Wiinning Projects -->
     <div id="winning-projects-con">
-      <div id="winning-project-img-con" class="grid-con">
-        <div
-          class="col-span-full m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-8"
-        >
-          <h2 class="featuring_h2">Winnig Projects</h2>
-          <div id="can-render-2">
-            <img src="images/Project2.png" alt="Project2" />
-          </div>
-          <div id="featuring-product-flex">
-            <img src="images/Project1.png" alt="Project1" />
-            <img src="images/Project2.png" alt="Project2" />
-            <img src="images/Project3.png" alt="Project3" />
-          </div>
-        </div>
+      <div id="winning-projects-img" class="grid-con">
+        <h2 class="col-span-full m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9">
+          Winning Projects
+        </h2>
+        <img class="col-span-full m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10 xl-col-start-4 xl-col-end-10" src="images/Project1.png" alt="laptop">
       </div>
-    </div>
+      <div id="winning-projects-img-2" class="grid-con">
+        <img src="images/Project2.png" alt="codes" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 xl-col-start-1 xl-col-end-">
+        <img src="images/Project1.png" alt="laptop" class="col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 xl-col-start-5 xl-col-end-9">
+        <img src="images/Project3.png" alt="sky" class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 xl-col-start-9 xl-col-end-13">
+      </div>
+    </div> 
 
     <!--Testimonials-->
     <div id="testimonial">
-      <section class="grid-con">
-        <h2>Testimonial</h2>
-        <div class="col-start-2 col-end-5 m-col-start-4 m-col-end-10">
-          <section id="testimonial-con1">
-            <h3 class="hidden">Testimonial Content 1</h3>
-          </section>
-          <section id="testimonial-con2">
-            <h3 class="hidden">Testimonial Content 2</h3>
-          </section>
-          <section id="testimonial-con3">
-            <h3 class="hidden">Testimonial Content 3</h3>
-          </section>
+      <div class="grid-con">
+        <div id="testimonial-h2" class="col-span-full m-col-span-full l-col-span-full">
+          <h2>Testimonial</h2>
         </div>
-      </section>
+      </div>
+      <div id="testimonial-box" class="grid-con">
+        <section id="testimonial-con1" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 xl-col-start-1 xl-col-end-5 ">
+          <h3 class="hidden">Testimonial Content 1</h3>
+        </section>
+        <section id="testimonial-con2" class="col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 xl-col-start-5 xl-col-end-9">
+          <h3 class="hidden">Testimonial Content 2</h3>
+        </section>
+        <section id="testimonial-con3" class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 xl-col-start-9 xl-col-end-13">
+          <h3 class="hidden">Testimonial Content 3</h3>
+        </section>
+      </div>
     </div>
 
     <!-- Program introduction -->
@@ -135,54 +133,60 @@
 
     <!-- Portfolios -->
     <div id="portfolio-con">
+      <div class="grid-con">
+        <div id="portfolio-h2" class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+          <h2>Portfolio</h2>
+        </div>
+      </div>
       <div id="portfolio" class="grid-con">
-        <div id="portfolio-box1">
-          <img src="images/Portfolio1.png" alt="Portfolio student image 1" />
+        <div id="portfolio-box1" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
+          <img src="images/Portfolio1.png" alt="Portfolio student image 1"/>
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box2">
+        <div id="portfolio-box2" class="col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
           <img src="images/Portfolio2.png" alt="Portfolio student image 2" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box3">
+        <div id="portfolio-box3" class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13">
           <img src="images/Portfolio3.png" alt="Portfolio student image 3" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box4">
+        <div id="portfolio-box4" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
           <img src="images/Portfolio4.png" alt="Portfolio student image 4" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box5">
+        <div id="portfolio-box5" class="col-span-full  m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
           <img src="images/Portfolio5.png" alt="Portfolio student image 5" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box6">
+        <div id="portfolio-box6" class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13">
           <img src="images/Portfolio6.png" alt="Portfolio student image 6" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box7">
+        <div id="portfolio-box7" class="col-span-full  m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
           <img src="images/Portfolio7.png" alt="Portfolio student image 7" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box8">
+        <div id="portfolio-box8" class="col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
           <img src="images/Portfolio8.png" alt="Portfolio student image 8" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box9">
+        <div id="portfolio-box9" class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13">
           <img src="images/Portfolio9.png" alt="Portfolio student image 9" />
           <p>Student Name</p>
         </div>
-        <div id="portfolio-box10">
+        <div id="portfolio-box10" class="col-span-full m-col-start-5 m-col-end-9">
           <img src="images/Portfolio10.png" alt="Portfolio student image 10" />
           <p>Student Name</p>
         </div>
       </div>
     </div>
     <!--Footer-->
-    <footer id="footer-hero" class="grid-con">
-      <section
+    <footer id="footer-hero">
+      <div class="grid-con">
+        <section
         id="footer-logo-info"
-        class="col-span-full m-col-start-3 m-col-end-6 l-col-start-2 l-col-end-5"
+        class="col-start-1 col-end-3 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4 xl-col-start-1 xl-col-end-4"
       >
         <h2 class="hidden">Footer Logo</h2>
         <img
@@ -190,17 +194,21 @@
           alt="Fanshawe White Logo"
           id="footer_logo"
         />
-      </section>
-      <section
-        id="footer-logo-info2"
-        class="col-span-full m-col-start-3 m-col-end-6 l-col-start-2 l-col-end-5"
-      >
-        <p>ABC location</p>
-      </section>
-
-      <div id="footer-privacy" class="col-span-full line-separator">
-        <p id="price-policy">&copy; Fanshawe College. All rights reserved.</p>
+        </section>
+        <section
+          id="footer-logo-info2"
+          class="col-start-3 col-end-6 m-col-start-9 m-col-end-13 xl-col-start-9 xl-col-end-13"
+        >
+          <p>
+            ABC location<br>
+            price-policy">&copy; Fanshawe College. All rights reserved.
+          </p>
+        </section>
       </div>
+
+      <!-- <div id="footer-privacy" class="col-span-full line-separator m-col-start-11 m-col-end-13 l-col-start-11 l-col-end-13">
+        <p id="price-policy">&copy; Fanshawe College. All rights reserved.</p>
+      </div> -->
     </footer>
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/main.js"></script>
