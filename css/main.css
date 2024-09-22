@@ -11,7 +11,7 @@ Couples Resort Responsive Build
     3.  Main Hero
     4.  Industrial Night Details
     5.  Fanshawe Industrial Video
-    6.  Winning Projects
+    4.  Winning Projects
     7.  Testimonials
     8.  Program introduction
     9.  Portfolios
@@ -44,11 +44,9 @@ textarea {
 }
 
 /* 2. ---Main Nav--- */
-
 #sticky-nav-con {
   position: sticky;
   top: 0px;
-  /* border-bottom: solid 1px #c3c3c3; */
   z-index: 1;
   background-color: rgb(18, 18, 18);
 
@@ -66,6 +64,8 @@ textarea {
   margin-top: 15px;
   transition: all 0.5s ease;
   margin-bottom: 20px;
+  margin-top: 22px;
+  margin-left: 30px;
   border: 0;
 }
 
@@ -73,14 +73,62 @@ textarea {
   transform: rotate(90deg);
 }
 
+/* Lightbox */
 #burger-con {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-#burger-con.slide-toggle {
-  display: block;
+/* Styling for the UL inside the lightbox */
+#burger-con ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  padding: 0;
+  margin-left: 30%;
+}
+
+#burger-con ul li {
+  margin: 20px 0;
+}
+
+#burger-con ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#close-btn {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 0px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+/* Show lightbox when toggled */
+#burger-con.show{
+  display: flex;
+}
+
+#burger-con.show ul {
+  display: flex; /* Make sure UL is flex or block when lightbox is active */
+  flex-direction: column;
+  align-items: center;
 }
 
 #main-nav ul li a:hover {
@@ -90,28 +138,18 @@ textarea {
 #main-nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  position: relative;
+  margin-top: -35px;
+ /* 이걸로 위아래 위치 조정 */
 }
 
 #main-nav ul li a {
   display: block;
-  padding: 10px 0 10px 0;
+  margin-right: 60px; 
   text-align: center;
   color: #efefef;
 }
 
-#main-nav ul li {
-  border-bottom: 1px solid #efefef;
-  
-}
-
-#main-nav ul li:first-child {
-  border-top: 1px solid #efefef;
-}
-
-#main-nav ul li:last-child {
-  margin-bottom: 10px;
-}
 
 #logo {
   margin-bottom: 20px;
@@ -156,7 +194,7 @@ textarea {
 }
 
 
-/* 6. ---Winning Projects--- */
+/* 4. ---Winning Projects--- */
 #winning-projects-img h2 {
   margin-bottom: 45px;
   margin-top: 45px;
@@ -295,7 +333,36 @@ textarea {
     position: relative;
     top: 10px;
   }
+  
+  #button {
+    display: block; /* Show hamburger button */
+ 
+  }
 
+  #burger-con {
+    top: 0px;
+    display: none; /* Hidden by default */
+  }
+
+  #burger-con ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #burger-con ul li {
+    margin: 20px 0;
+  }
+
+  #burger-con.show {
+    display: flex; /* Display the lightbox when active */
+  }
+
+  /* Hide the regular nav menu outside the lightbox on mobile */
+  #main-nav ul {
+    display: none;
+  }
+ 
   #poster {
     height: 200px; /* Further reduce height for very small screens */
   }
@@ -392,11 +459,10 @@ textarea {
     height: 90px;  
   }
 
-
   #main-nav {
-    margin-top: 3%;
-    margin-bottom: 4%;
-    padding-left: 30px;
+    margin-top: 8%;
+    /* margin-bottom: 4%; */
+    margin-left: 200px;
   }
 
   #logo {
@@ -413,12 +479,23 @@ textarea {
   }
 
   #burger-con {
-    display: block;
-    font-size: 12px;
-    display: flex;
-    justify-content: flex-end;
+    display: flex; /* Display regular menu on larger screens */
+    background-color: transparent; /* No lightbox for larger screens */
+    position: relative;
+    width: auto;
+    height: auto;
   }
 
+  #close-btn {
+    display: none;
+  }
+
+  #burger-con ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  
   #burger-con ul li,
   #burger-con ul li:first-child {
     border: none;
@@ -426,12 +503,8 @@ textarea {
   }
 
   #burger-con ul li {
-    margin-right: 30px;
+    /* margin-right: 30px; */
     font-size: 19px;
-  }
-
-  #burger-con ul li:last-child {
-    margin-right: px;
   }
 
   #logo {
@@ -503,19 +576,34 @@ textarea {
   }
 
   #main-nav {
-    margin-top: 1.5%;
-    margin-bottom: 2%;
-    margin-left: 25px;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    margin-left: 400px;
   }
+
 
   #logo {
     position: relative;
     top: -15px;
   }
 
+  #close-btn {
+    display: none; /* No close button on larger screens */
+  }
+
   #burger-con {
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    width: auto;
+    height: auto;
     font-size: 16px;
     margin-top: 28px;
+  }
+
+  #burger-con ul {
+    display: flex;
+    justify-content: flex-end;
   }
 
   #burger-con ul li {
