@@ -1,17 +1,28 @@
-(function () {
-  "use strict";
-  console.log("fired");
+const burgerButton = document.getElementById('button');
+const closeButton = document.getElementById('close-btn');
+const burgerCon = document.getElementById('burger-con');
 
-  let burger = document.querySelector("#button");
-  let burgerCon = document.querySelector("#burger-con");
+burgerButton.addEventListener('click', () => {
+  burgerCon.classList.toggle('show');
+});
 
-  function hamburgerMenu() {
-    burger.classList.toggle("expanded");
-    burgerCon.classList.toggle("slide-toggle");
-  }
+closeButton.addEventListener('click', () => {
+  burgerCon.classList.remove('show');
+});
+// (function () {
+//   "use strict";
+//   console.log("fired");
 
-  burger.addEventListener("click", hamburgerMenu, false);
-})();
+//   let burger = document.querySelector("#button");
+//   let burgerCon = document.querySelector("#burger-con");
+
+//   function hamburgerMenu() {
+//     burger.classList.toggle("expanded");
+//     burgerCon.classList.toggle("slide-toggle");
+//   }
+
+//   burger.addEventListener("click", hamburgerMenu, false);
+// })();
 
 const testimonialCon1 = document.querySelector("#testimonial-con1");
 const testimonialCon2 = document.querySelector("#testimonial-con2");
