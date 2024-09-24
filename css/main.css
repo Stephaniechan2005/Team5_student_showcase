@@ -202,6 +202,15 @@ textarea {
 
 #winning-projects-img img {
   margin-bottom: 35px;
+  margin-left: 25px;
+}
+
+#winning-projects-img-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 #winning-projects-img img,
@@ -518,6 +527,20 @@ textarea {
     padding-right: 40px;
   }
 
+  #showimg {
+    width: 90%;
+  }
+
+  #winning-projects-img-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+  }
+  #winning-team {
+    flex: 2;
+  }
   #program-introduction-con {
     margin: 45px 0;
   }
