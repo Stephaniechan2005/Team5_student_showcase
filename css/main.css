@@ -210,6 +210,10 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+#winning-projects-img-2 a {
+  width: relative;
+}
+
 /* 7. ---Testimonials--- */
 #testimonial {
   background-color: #efefef;
