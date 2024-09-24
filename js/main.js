@@ -1,13 +1,13 @@
-const burgerButton = document.getElementById('button');
-const closeButton = document.getElementById('close-btn');
-const burgerCon = document.getElementById('burger-con');
+const burgerButton = document.getElementById("button");
+const closeButton = document.getElementById("close-btn");
+const burgerCon = document.getElementById("burger-con");
 
-burgerButton.addEventListener('click', () => {
-  burgerCon.classList.toggle('show');
+burgerButton.addEventListener("click", () => {
+  burgerCon.classList.toggle("show");
 });
 
-closeButton.addEventListener('click', () => {
-  burgerCon.classList.remove('show');
+closeButton.addEventListener("click", () => {
+  burgerCon.classList.remove("show");
 });
 // (function () {
 //   "use strict";
@@ -76,3 +76,15 @@ displayTestimonial(testimonialCon3, testimonials[2]);
 
 //video
 const player = new Plyr("video");
+
+//change image for winning team
+
+const theButtons = document.querySelectorAll(".changeimg");
+const showImage = document.querySelector("#showimg");
+
+function changeImage(event) {
+  const newSrc = event.currentTarget.src;
+  showImage.src = newSrc;
+}
+
+theButtons.forEach((button) => button.addEventListener("click", changeImage));
