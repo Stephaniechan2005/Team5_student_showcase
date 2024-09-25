@@ -19,6 +19,7 @@ toggleButton.addEventListener("click", () => {
   } else {
     toggleButtonIcon.classList.remove("fa-regular");
     toggleButtonIcon.classList.remove("fa-circle-xmark");
+
     toggleButtonIcon.classList.add("fa-solid");
     toggleButtonIcon.classList.add("fa-bars");
   }
