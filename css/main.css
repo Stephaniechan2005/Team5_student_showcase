@@ -80,13 +80,14 @@ textarea {
   margin-top: 15px;
   font-size: 30px;
   cursor: pointer;
+  margin-left: 40px;
   display: none;
 }
 
 #mobile_dropdown_menu {
   display: none;
   position: absolute;
-  right: 0;
+  right: -300px;
   top: 70px;
   width: 300px;
   height: 0px;
@@ -365,14 +366,25 @@ textarea {
 
   #mobile_dropdown_menu {
     display: none;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -300px;
     top: 70px;
     width: 300px;
-    height: 0px;
+    height: 100vh;
     background-color: rgb(18, 18, 18);
-    overflow: hidden;
-    transition: right 1s ease-in-out;
+    animation: slideIn 0.5s ease-in-out forwards;
+    z-index: 1000;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
   }
 
   #mobile_dropdown_menu.show {
@@ -415,6 +427,10 @@ textarea {
     border-radius: 15px;
     text-align: center;
     padding: 15px;
+  }
+
+  #showimg {
+    display: none;
   }
 
   #winning-projects-img {
@@ -642,6 +658,7 @@ textarea {
   }
 
   #showimg {
+    display: block;
     width: 90%;
   }
 

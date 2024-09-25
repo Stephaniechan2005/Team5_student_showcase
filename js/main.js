@@ -6,8 +6,10 @@ const mobileMenu = document.querySelector("#mobile_dropdown_menu");
 
 toggleButton.addEventListener("click", () => {
   console.log("fired");
+
   mobileMenu.classList.toggle("show");
   const isExpanded = mobileMenu.classList.contains("show");
+
   if (isExpanded) {
     toggleButtonIcon.classList.remove("fa-solid");
     toggleButtonIcon.classList.remove("fa-bars");
