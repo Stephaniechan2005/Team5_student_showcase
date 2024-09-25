@@ -521,7 +521,7 @@ textarea {
   #main-nav {
     margin-top: 8%;
     /* margin-bottom: 4%; */
-    margin-left: 100px;
+    /* margin-left: 170px; */
   }
 
   #logo {
@@ -532,12 +532,11 @@ textarea {
   
   #main-nav ul li a {
     display: block;
-    margin-right: 10px;
+    margin-right: 15px;
     font-size: 20px;
     text-align: center;
     color: #efefef;
   }
-  
 
   #button {
     display: none;
@@ -862,7 +861,7 @@ textarea {
     display: block;
     position: absolute;
     left: 200px;
-    top: 3250px;
+    top: 3400px;
   }
 
   #program-introduction-mid {
