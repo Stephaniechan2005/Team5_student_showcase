@@ -372,8 +372,16 @@ textarea {
     width: 300px;
     height: 100vh;
     background-color: rgb(18, 18, 18);
-    animation: slideIn 0.5s ease-in-out forwards;
     z-index: 1000;
+  }
+
+  #mobile_dropdown_menu.show {
+    height: 100vh;
+    display: block;
+  }
+
+  #mobile_dropdown_menu.hide {
+    animation: slideOut 0.5s ease-in-out forwards;
   }
 
   @keyframes slideIn {
@@ -387,9 +395,15 @@ textarea {
     }
   }
 
-  #mobile_dropdown_menu.show {
-    height: 100vh;
-    display: block;
+  @keyframes slideOut {
+    from {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 0;
+    }
   }
 
   #burger-con {
