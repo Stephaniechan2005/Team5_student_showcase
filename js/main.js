@@ -1,4 +1,28 @@
-const burgerButton = document.getElementById("button");
+/*Menu*/
+
+const toggleButton = document.querySelector(".toggle_button");
+const toggleButtonIcon = document.querySelector(".toggle_button i");
+const mobileMenu = document.querySelector("#mobile_dropdown_menu");
+
+toggleButton.addEventListener("click", () => {
+  console.log("fired");
+  mobileMenu.classList.toggle("show");
+  const isExpanded = mobileMenu.classList.contains("show");
+  if (isExpanded) {
+    toggleButtonIcon.classList.remove("fa-solid");
+    toggleButtonIcon.classList.remove("fa-bars");
+
+    toggleButtonIcon.classList.add("fa-regular");
+    toggleButtonIcon.classList.add("fa-circle-xmark");
+  } else {
+    toggleButtonIcon.classList.remove("fa-regular");
+    toggleButtonIcon.classList.remove("fa-circle-xmark");
+    toggleButtonIcon.classList.add("fa-solid");
+    toggleButtonIcon.classList.add("fa-bars");
+  }
+});
+
+/*const burgerButton = document.getElementById("button");
 const closeButton = document.getElementById("close-btn");
 const burgerCon = document.getElementById("burger-con");
 
@@ -8,7 +32,8 @@ burgerButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
   burgerCon.classList.remove("show");
-});
+});*/
+
 // (function () {
 //   "use strict";
 //   console.log("fired");
