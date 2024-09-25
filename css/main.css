@@ -75,6 +75,42 @@ textarea {
   transform: rotate(90deg);
 }
 
+#main-nav .toggle_button {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#mobile_dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 300px;
+  height: 0px;
+  background-color: rgb(18, 18, 18);
+  overflow: hidden;
+  transition: right 0.5s ease;
+}
+
+#mobile_dropdown_menu li {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#mobile_dropdown_menu ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* Lightbox */
 #burger-con {
   position: fixed;
@@ -109,6 +145,7 @@ textarea {
   color: white;
   font-size: 24px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 #close-btn {
@@ -321,8 +358,26 @@ textarea {
     top: 10px;
   }
 
-  #button {
+  #main-nav .toggle_button {
     display: block; /* Show hamburger button */
+    color: #fff;
+  }
+
+  #mobile_dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 300px;
+    height: 0px;
+    background-color: rgb(18, 18, 18);
+    overflow: hidden;
+    transition: right 1s ease-in-out;
+  }
+
+  #mobile_dropdown_menu.show {
+    height: 100vh;
+    display: block;
   }
 
   #burger-con {
@@ -443,7 +498,7 @@ textarea {
     margin-right: 20px;
     background-color: #fff;
   }
-  
+
   #portfolio-box1 img,
   #portfolio-box2 img,
   #portfolio-box3 img,
@@ -458,7 +513,6 @@ textarea {
     width: 100%;
   }
 
-  
   #portfolio-first-row,
   #portfolio-second-row,
   #portfolio-third-row {
@@ -475,16 +529,16 @@ textarea {
   #portfolio-box10 p {
     text-align: center;
     padding: 30px 0;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
-  
+
   #portfolio-box2 p,
   #portfolio-box5 p {
     text-align: center;
     padding-top: 7%;
     padding-bottom: 7%;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
 
@@ -529,7 +583,6 @@ textarea {
     top: -15px;
   }
 
-  
   #main-nav ul li a {
     display: block;
     margin-right: 15px;
@@ -538,7 +591,10 @@ textarea {
     color: #efefef;
   }
 
-  #button {
+  #main-nav .toggle_button {
+    display: none;
+  }
+  #mobile_dropdown_menu {
     display: none;
   }
 
@@ -643,7 +699,7 @@ textarea {
   #portfolio-con {
     background-color: #efefef;
   }
-  
+
   #portfolio-first-row,
   #portfolio-second-row,
   #portfolio-third-row {
@@ -651,7 +707,7 @@ textarea {
     justify-content: center;
     gap: 0.1%;
   }
-  
+
   #portfolio-box2 {
     height: 300px;
     background-color: #fff;
@@ -659,7 +715,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box5 {
     height: 340px;
     background-color: #fff;
@@ -668,7 +724,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box8 {
     height: 340px;
     background-color: #fff;
@@ -677,29 +733,29 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box10 {
     background-color: #fff;
     margin-top: -4%;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* box9-box10-container */
   #box9-box10-container {
     display: flex;
     flex-direction: column;
   }
-  
+
   #portfolio-con #portfolio img {
     border-radius: 15px;
   }
-  
+
   #portfolio-h2 {
     text-align: center;
     padding-top: 45px;
   }
-  
+
   #portfolio-box1,
   #portfolio-box3,
   #portfolio-box4,
@@ -712,7 +768,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box7,
   #portfolio-box9 {
     object-fit: cover;
@@ -722,11 +778,11 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box10 img {
     object-fit: cover;
   }
-  
+
   #portfolio-box1 p,
   #portfolio-box3 p,
   #portfolio-box4 p,
@@ -737,18 +793,17 @@ textarea {
   #portfolio-box10 p {
     text-align: center;
     padding: 30px 0;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
-  
+
   #portfolio-box2 p,
   #portfolio-box5 p {
     text-align: center;
     padding-top: 8%;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
-
 
   #footer-logo-info2 p {
     font-size: 12px;
@@ -775,7 +830,6 @@ textarea {
     text-align: center;
     color: #efefef;
   }
-  
 
   #logo {
     position: relative;
@@ -899,7 +953,7 @@ textarea {
   #portfolio-con {
     background-color: #efefef;
   }
-  
+
   #portfolio-first-row,
   #portfolio-second-row,
   #portfolio-third-row {
@@ -907,7 +961,7 @@ textarea {
     justify-content: center;
     gap: 2%;
   }
-  
+
   #portfolio-box2 {
     height: 415px;
     background-color: #fff;
@@ -915,7 +969,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box5 {
     height: 475px;
     background-color: #fff;
@@ -924,7 +978,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box8 {
     height: 475px;
     background-color: #fff;
@@ -933,29 +987,29 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box10 {
     background-color: #fff;
     margin-top: -4%;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* box9-box10-container */
   #box9-box10-container {
     display: flex;
     flex-direction: column;
   }
-  
+
   #portfolio-con #portfolio img {
     border-radius: 15px;
   }
-  
+
   #portfolio-h2 {
     text-align: center;
     padding-top: 45px;
   }
-  
+
   #portfolio-box1,
   #portfolio-box3,
   #portfolio-box4,
@@ -968,7 +1022,7 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box7,
   #portfolio-box9 {
     object-fit: cover;
@@ -978,11 +1032,11 @@ textarea {
     object-fit: fill;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   #portfolio-box10 img {
     object-fit: cover;
   }
-  
+
   #portfolio-box1 p,
   #portfolio-box3 p,
   #portfolio-box4 p,
@@ -993,15 +1047,15 @@ textarea {
   #portfolio-box10 p {
     text-align: center;
     padding: 30px 0;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
-  
+
   #portfolio-box2 p,
   #portfolio-box5 p {
     text-align: center;
     padding-top: 7%;
-    color:#c9261a;
+    color: #c9261a;
     font-weight: 600;
   }
 
