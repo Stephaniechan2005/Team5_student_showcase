@@ -1,5 +1,4 @@
 /*Menu*/
-
 const toggleButton = document.querySelector(".toggle_button");
 const toggleButtonIcon = document.querySelector(".toggle_button i");
 const mobileMenu = document.querySelector("#mobile_dropdown_menu");
@@ -7,23 +6,29 @@ const mobileMenu = document.querySelector("#mobile_dropdown_menu");
 toggleButton.addEventListener("click", () => {
   console.log("fired");
 
-  mobileMenu.classList.toggle("show");
-  const isExpanded = mobileMenu.classList.contains("show");
+  if (mobileMenu.classList.contains("show")) {
+    // 메뉴보이면 숨기기
+    mobileMenu.classList.remove("show");
+    mobileMenu.classList.add("hide");
+    
+    // 메뉴 숨기기 전에 애니메이션 끝나기 기다려
+    setTimeout(() => {
+      mobileMenu.classList.remove("hide");
+      mobileMenu.style.display = "none";
+    }, 500); // 500ms matches the animation duration
 
-  if (isExpanded) {
-    toggleButtonIcon.classList.remove("fa-solid");
-    toggleButtonIcon.classList.remove("fa-bars");
-
-    toggleButtonIcon.classList.add("fa-regular");
-    toggleButtonIcon.classList.add("fa-circle-xmark");
+    toggleButtonIcon.classList.remove("fa-regular", "fa-circle-xmark");
+    toggleButtonIcon.classList.add("fa-solid", "fa-bars");
   } else {
-    toggleButtonIcon.classList.remove("fa-regular");
-    toggleButtonIcon.classList.remove("fa-circle-xmark");
+    //  메뉴 숨겨진거 보이기
+    mobileMenu.style.display = "block";
+    mobileMenu.classList.add("show");
 
-    toggleButtonIcon.classList.add("fa-solid");
-    toggleButtonIcon.classList.add("fa-bars");
+    toggleButtonIcon.classList.remove("fa-solid", "fa-bars");
+    toggleButtonIcon.classList.add("fa-regular", "fa-circle-xmark");
   }
 });
+
 
 /*const burgerButton = document.getElementById("button");
 const closeButton = document.getElementById("close-btn");
