@@ -24,7 +24,7 @@ TODO: Write history
 
 ## Credits
 
-Chan Wing Lam Stephanie and Park Kyuri
+Chan Wing Lam Stephanie, Park Kyuri, Huertas Tanya Mae and Chu Qiao-Yi
 
 ## License
 
