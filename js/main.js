@@ -7,11 +7,11 @@ toggleButton.addEventListener("click", () => {
   console.log("fired");
 
   if (mobileMenu.classList.contains("show")) {
-    // 메뉴보이면 숨기기
+    // Hide the menu
     mobileMenu.classList.remove("show");
     mobileMenu.classList.add("hide");
     
-    // 메뉴 숨기기 전에 애니메이션 끝나기 기다려
+    // wait for animation to finish before hide the menu
     setTimeout(() => {
       mobileMenu.classList.remove("hide");
       mobileMenu.style.display = "none";
@@ -20,7 +20,7 @@ toggleButton.addEventListener("click", () => {
     toggleButtonIcon.classList.remove("fa-regular", "fa-circle-xmark");
     toggleButtonIcon.classList.add("fa-solid", "fa-bars");
   } else {
-    //  메뉴 숨겨진거 보이기
+    // showing the hidden menu
     mobileMenu.style.display = "block";
     mobileMenu.classList.add("show");
 
