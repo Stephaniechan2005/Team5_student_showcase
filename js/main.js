@@ -137,14 +137,11 @@ let portfolioData = [
 ];
 
 function createPortfolioItem(item) {
-  // create new div
-  const div = document.createElement("div");
-  // give div id
+  const div = document.createElement('div');
   div.id = `portfolio-box${item.id}`;
-  // indicate image and the name inside of the div
   div.innerHTML = `
     <img src="${item.image}" alt="Portfolio student image ${item.id}" />
-    <p>${item.name}</p>
+    <p><a href="#" onclick="return false;">${item.name}</a></p>
   `;
   return div;
 }
