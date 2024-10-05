@@ -201,7 +201,7 @@ function renderPortfolio() {
         start: "top 100%",
         end: "bottom 90%",
         scrub: true,
-        markers: true,
+        markers: false,
         toggleActions: "play none none reverse",
       },
     });
