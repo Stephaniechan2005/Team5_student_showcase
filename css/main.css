@@ -209,7 +209,17 @@ textarea {
 #industrial-night {
   margin-top: 45px;
 }
+#industrial-night-left {
+  position: relative;
+  opacity: 0;
+  left: -400px;
+}
 
+#video {
+  position: relative;
+  opacity: 0;
+  right: -400px;
+}
 #industrial-night-left h2 {
   margin-bottom: 15px;
 }
@@ -233,6 +243,10 @@ textarea {
 }
 
 /* 4. ---Winning Projects--- */
+
+#winning-projects-img {
+  /*opacity: 0;*/
+}
 #winning-projects-img h2 {
   margin-bottom: 45px;
   margin-top: 45px;
@@ -275,8 +289,8 @@ textarea {
   margin-bottom: 45px;
 }
 
-#testimonial-box {
-  display: grid;
+#testimonial section {
+  opacity: 0;
 }
 
 #testimonial-con1,

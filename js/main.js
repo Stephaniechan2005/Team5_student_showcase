@@ -10,7 +10,7 @@ toggleButton.addEventListener("click", () => {
     // Hide the menu
     mobileMenu.classList.remove("show");
     mobileMenu.classList.add("hide");
-    
+
     // wait for animation to finish before hide the menu
     setTimeout(() => {
       mobileMenu.classList.remove("hide");
@@ -28,7 +28,6 @@ toggleButton.addEventListener("click", () => {
     toggleButtonIcon.classList.add("fa-regular", "fa-circle-xmark");
   }
 });
-
 
 /*const burgerButton = document.getElementById("button");
 const closeButton = document.getElementById("close-btn");
@@ -131,7 +130,7 @@ let portfolioData = [
   { id: 4, image: "images/Portfolio4.png", name: "Joy" },
   { id: 5, image: "images/Portfolio5.png", name: "Henry" },
   { id: 6, image: "images/Portfolio6.png", name: "Nate" },
-  { id: 7, image: "images/Portfolio7.png", name: "Kith" },
+  { id: 7, image: "images/Portfolio7.png", name: "Keith" },
   { id: 8, image: "images/Portfolio8.png", name: "Conny" },
   { id: 9, image: "images/Portfolio9.png", name: "Sheldon" },
   { id: 10, image: "images/Portfolio10.png", name: "Maggie" },
@@ -139,7 +138,7 @@ let portfolioData = [
 
 function createPortfolioItem(item) {
   // create new div
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   // give div id
   div.id = `portfolio-box${item.id}`;
   // indicate image and the name inside of the div
@@ -152,18 +151,18 @@ function createPortfolioItem(item) {
 
 function renderPortfolio() {
   // find the container element
-  const portfolioContainer = document.getElementById('portfolio');
+  const portfolioContainer = document.getElementById("portfolio");
   //create three rows
   const rows = [
-    document.createElement('div'),
-    document.createElement('div'),
-    document.createElement('div')
+    document.createElement("div"),
+    document.createElement("div"),
+    document.createElement("div"),
   ];
 
   // give each row id
-  rows[0].id = 'portfolio-first-row';
-  rows[1].id = 'portfolio-second-row';
-  rows[2].id = 'portfolio-third-row';
+  rows[0].id = "portfolio-first-row";
+  rows[1].id = "portfolio-second-row";
+  rows[2].id = "portfolio-third-row";
 
   portfolioData.forEach((item, index) => {
     const portfolioItem = createPortfolioItem(item);
@@ -177,19 +176,247 @@ function renderPortfolio() {
       // add rest three on third row
       if (index === 7 || index === 9) {
         // 8,10 are the execption
-        if (!rows[2].querySelector('#box9-box10-container')) {
-          const container = document.createElement('div');
-          container.id = 'box9-box10-container';
+        if (!rows[2].querySelector("#box9-box10-container")) {
+          const container = document.createElement("div");
+          container.id = "box9-box10-container";
           rows[2].appendChild(container);
         }
-        rows[2].querySelector('#box9-box10-container').appendChild(portfolioItem);
+        rows[2]
+          .querySelector("#box9-box10-container")
+          .appendChild(portfolioItem);
       } else {
         rows[2].appendChild(portfolioItem);
       }
     }
   });
 
-  rows.forEach(row => portfolioContainer.appendChild(row));
+  rows.forEach((row) => portfolioContainer.appendChild(row));
+
+  const portfolioItems = document.querySelectorAll("#portfolio > div");
+
+  for (let i = 0; i < portfolioItems.length; i++) {
+    let t10 = gsap.timeline({
+      scrollTrigger: {
+        trigger: portfolioItems[i],
+        start: "top 100%",
+        end: "bottom 90%",
+        scrub: true,
+        markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    t10.fromTo(
+      portfolioItems[i],
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05,
+        duration: 0.2,
+        ease: "power2.in",
+      }
+    );
+  }
 }
 
-document.addEventListener('DOMContentLoaded', renderPortfolio);
+document.addEventListener("DOMContentLoaded", renderPortfolio);
+
+//gsap animation
+
+let t1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#industrial-night",
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play none none reverse",
+  },
+});
+
+t1.to("#industrial-night-left", {
+  opacity: 1,
+  x: 400,
+  y: -20,
+  duration: 0.5,
+  ease: "power2.out",
+});
+
+let t2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#industrial-night",
+    start: "top 90%",
+    end: "bottom 80%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play none none reverse",
+  },
+});
+
+t2.to("#video", {
+  opacity: 1,
+  x: -400,
+  y: -20,
+  duration: 2,
+  ease: "power2.out",
+});
+
+let t3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#winning-projects-con",
+    start: "top 20%",
+    end: "bottom 20%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play none none reverse",
+  },
+});
+
+t3.to("#winning-projects-img", {
+  opacity: 0,
+  y: -70,
+  duration: 0.5,
+  ease: "power2.out",
+});
+
+let t4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#winning-projects-img-2",
+    start: "top 10%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play none none reverse",
+  },
+});
+
+t4.to("#winning-projects-img-2 img", {
+  opacity: 0,
+  y: -70,
+  stagger: 0.2,
+  duration: 0.5,
+  ease: "power2.out",
+});
+
+let t5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#testimonial",
+    start: "top 60%",
+    end: "bottom 20%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play none none reverse",
+  },
+});
+
+t5.to("#testimonial-box section", {
+  opacity: 1,
+  y: -30,
+  stagger: 0.2,
+  duration: 1,
+  ease: "power2.out",
+});
+
+let t6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#program-introduction-img1",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+t6.fromTo(
+  "#program-introduction-img1",
+  {
+    opacity: 0,
+    x: 500,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 0.2,
+    ease: "power2.out",
+  }
+);
+
+let t7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#program-introduction-img2",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+t7.fromTo(
+  "#program-introduction-img2",
+  {
+    opacity: 0,
+    y: 30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.2,
+    ease: "power2.out",
+  }
+);
+
+let t8 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#program-introduction-img3",
+    start: "top 100%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+t8.fromTo(
+  "#program-introduction-img3",
+  {
+    opacity: 0,
+    y: -40,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.2,
+    ease: "power2.out",
+  }
+);
+
+let t9 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#program-introduction-img2",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+t9.fromTo(
+  "#program-introduction-img4",
+  {
+    opacity: 0,
+    x: -500,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 0.2,
+    ease: "power2.out",
+  }
+);
