@@ -310,7 +310,7 @@ textarea {
 }
 
 /* 8. ---Program Introduction--- */
-#program-introduction-mid button {
+#program-introduction-mid a {
   background-color: #c9261a;
   color: #fff;
   border-radius: 20px;
@@ -318,9 +318,11 @@ textarea {
   width: 95px;
   height: 35px;
   margin-top: 15px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
-#program-introduction-mid button:hover {
+#program-introduction-mid a:hover {
   background-color: #a81e15;
   transform: translateY(-2px);
 }
@@ -500,17 +502,19 @@ textarea {
     font-size: 15px;
   }
 
-  #program-introduction-mid button {
+  #program-introduction-mid a {
     background-color: #c9261a;
     color: #fff;
     border-radius: 20px;
     border: none;
+    padding: 10px 20px;
     width: 95px;
     height: 35px;
+    z-index: 1000;
     margin-top: 15px;
   }
 
-  #program-introduction-mid button:hover {
+  #program-introduction-mid a:hover {
     background-color: #a81e15;
     transform: translateY(-2px);
   }
@@ -726,7 +730,7 @@ textarea {
     font-size: 17px;
   }
 
-  #program-introduction-mid button {
+  #program-introduction-mid a {
     background-color: #c9261a;
     color: #fff;
     border-radius: 20px;
@@ -964,9 +968,11 @@ textarea {
   }
 
   #program-introduction-mid {
+    position: relative;
     margin: 0 400px;
     text-align: center;
     padding: 0 90px;
+    z-index: 1001;
   }
 
   #program-introduction-mid h2 {
@@ -979,7 +985,7 @@ textarea {
     line-height: 25px;
   }
 
-  #program-introduction-mid button {
+  #program-introduction-mid a {
     background-color: #c9261a;
     color: #fff;
     border-radius: 20px;
@@ -989,7 +995,7 @@ textarea {
     margin-top: 15px;
   }
 
-  #program-introduction-mid button:hover {
+  #program-introduction-mid a:hover {
     background-color: #a81e15;
     transform: translateY(-2px);
   }
