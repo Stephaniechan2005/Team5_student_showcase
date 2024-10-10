@@ -123,26 +123,134 @@ theButtons.forEach((button) => button.addEventListener("click", changeImage));
 
 //portfolio
 const portfolios = [
-  { name: 'Student Name 1', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
-  { name: 'Student Name 2', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
-  { name: 'Student Name 3', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
-  { name: 'Student Name 4', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
-  { name: 'Student Name 5', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
-  { name: 'Student Name 6', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
-  { name: 'Student Name 7', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
-  { name: 'Student Name 8', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
-  { name: 'Student Name 9', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
-  { name: 'Student Name 10', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
-  { name: 'Student Name 11', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
-  { name: 'Student Name 6', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
+  {
+    name: "Student Name 1",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 1,
+    mColEnd: 5,
+    lColStart: 1,
+    lColEnd: 5,
+  },
+  {
+    name: "Student Name 2",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 5,
+    mColEnd: 9,
+    lColStart: 5,
+    lColEnd: 9,
+  },
+  {
+    name: "Student Name 3",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 9,
+    mColEnd: 13,
+    lColStart: 9,
+    lColEnd: 13,
+  },
+  {
+    name: "Student Name 4",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 1,
+    mColEnd: 5,
+    lColStart: 1,
+    lColEnd: 5,
+  },
+  {
+    name: "Student Name 5",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 5,
+    mColEnd: 9,
+    lColStart: 5,
+    lColEnd: 9,
+  },
+  {
+    name: "Student Name 6",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 9,
+    mColEnd: 13,
+    lColStart: 9,
+    lColEnd: 13,
+  },
+  {
+    name: "Student Name 7",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 1,
+    mColEnd: 5,
+    lColStart: 1,
+    lColEnd: 5,
+  },
+  {
+    name: "Student Name 8",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 5,
+    mColEnd: 9,
+    lColStart: 5,
+    lColEnd: 9,
+  },
+  {
+    name: "Student Name 9",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 9,
+    mColEnd: 13,
+    lColStart: 9,
+    lColEnd: 13,
+  },
+  {
+    name: "Student Name 10",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 1,
+    mColEnd: 5,
+    lColStart: 1,
+    lColEnd: 5,
+  },
+  {
+    name: "Student Name 11",
+    img: "images/studentLogo.png",
+    colStart: 1,
+    colEnd: 4,
+    mColStart: 5,
+    mColEnd: 9,
+    lColStart: 5,
+    lColEnd: 9,
+  },
+  {
+    name: "Student Name 12",
+    img: "images/studentLogo.png",
+    colStart: 4,
+    colEnd: 7,
+    mColStart: 9,
+    mColEnd: 13,
+    lColStart: 9,
+    lColEnd: 13,
+  },
   // Add more student details here...
 ];
 
-const portfolioInnerCon = document.getElementById('portfolio-inner-con');
+const portfolioInnerCon = document.getElementById("portfolio-inner-con");
 
 portfolios.forEach((portfolio) => {
-  const portfolioBox = document.createElement('div');
-  portfolioBox.classList.add('portfolio-box');
+  const portfolioBox = document.createElement("div");
+  portfolioBox.classList.add("portfolio-box");
   portfolioBox.classList.add(`col-start-${portfolio.colStart}`);
   portfolioBox.classList.add(`col-end-${portfolio.colEnd}`);
   portfolioBox.classList.add(`m-col-start-${portfolio.mColStart}`);
@@ -150,14 +258,14 @@ portfolios.forEach((portfolio) => {
   portfolioBox.classList.add(`l-col-start-${portfolio.lColStart}`);
   portfolioBox.classList.add(`l-col-end-${portfolio.lColEnd}`);
 
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.src = portfolio.img;
   img.alt = `student logo for ${portfolio.name}`;
 
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   link.href = "#";
-  
-  const p = document.createElement('p');
+
+  const p = document.createElement("p");
   p.textContent = portfolio.name;
 
   link.appendChild(p);
@@ -459,5 +567,31 @@ t9.fromTo(
     x: 0,
     duration: 0.2,
     ease: "power2.out",
+  }
+);
+
+let t10 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#portfolio-inner-con",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+    markers: false,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+t10.fromTo(
+  "#portfolio-inner-con",
+  {
+    opacity: 0,
+    y: 50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    // stagger: 0.05,
+    duration: 5,
+    // ease: "power2.in",
   }
 );
