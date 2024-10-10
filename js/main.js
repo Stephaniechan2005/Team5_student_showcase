@@ -122,105 +122,149 @@ function changeImage(event) {
 theButtons.forEach((button) => button.addEventListener("click", changeImage));
 
 //portfolio
-// I declared them with let so, we can change the data later
-let portfolioData = [
-  { id: 1, image: "images/Portfolio1.png", name: "Hailie" },
-  { id: 2, image: "images/Portfolio2.png", name: "Stephanie" },
-  { id: 3, image: "images/Portfolio3.png", name: "Tanya" },
-  { id: 4, image: "images/Portfolio4.png", name: "Joy" },
-  { id: 5, image: "images/Portfolio5.png", name: "Henry" },
-  { id: 6, image: "images/Portfolio6.png", name: "Nate" },
-  { id: 7, image: "images/Portfolio7.png", name: "Keith" },
-  { id: 8, image: "images/Portfolio8.png", name: "Conny" },
-  { id: 9, image: "images/Portfolio9.png", name: "Sheldon" },
-  { id: 10, image: "images/Portfolio10.png", name: "Maggie" },
+const portfolios = [
+  { name: 'Student Name 1', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
+  { name: 'Student Name 2', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
+  { name: 'Student Name 3', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
+  { name: 'Student Name 4', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
+  { name: 'Student Name 5', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
+  { name: 'Student Name 6', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
+  { name: 'Student Name 7', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
+  { name: 'Student Name 8', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
+  { name: 'Student Name 9', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
+  { name: 'Student Name 10', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 1, mColEnd: 5, lColStart: 1, lColEnd: 5 },
+  { name: 'Student Name 11', img: 'images/studentLogo.png', colStart: 1, colEnd: 4, mColStart: 5, mColEnd: 9, lColStart: 5, lColEnd: 9 },
+  { name: 'Student Name 6', img: 'images/studentLogo.png', colStart: 4, colEnd: 7, mColStart: 9, mColEnd: 13, lColStart: 9, lColEnd: 13 },
+  // Add more student details here...
 ];
 
-function createPortfolioItem(item) {
-  const div = document.createElement('div');
-  div.id = `portfolio-box${item.id}`;
-  div.innerHTML = `
-    <img src="${item.image}" alt="Portfolio student image ${item.id}" />
-    <p><a href="#" onclick="return false;">${item.name}</a></p>
-  `;
-  return div;
-}
+const portfolioInnerCon = document.getElementById('portfolio-inner-con');
 
-function renderPortfolio() {
-  // find the container element
-  const portfolioContainer = document.getElementById("portfolio");
-  //create three rows
-  const rows = [
-    document.createElement("div"),
-    document.createElement("div"),
-    document.createElement("div"),
-  ];
+portfolios.forEach((portfolio) => {
+  const portfolioBox = document.createElement('div');
+  portfolioBox.classList.add('portfolio-box');
+  portfolioBox.classList.add(`col-start-${portfolio.colStart}`);
+  portfolioBox.classList.add(`col-end-${portfolio.colEnd}`);
+  portfolioBox.classList.add(`m-col-start-${portfolio.mColStart}`);
+  portfolioBox.classList.add(`m-col-end-${portfolio.mColEnd}`);
+  portfolioBox.classList.add(`l-col-start-${portfolio.lColStart}`);
+  portfolioBox.classList.add(`l-col-end-${portfolio.lColEnd}`);
 
-  // give each row id
-  rows[0].id = "portfolio-first-row";
-  rows[1].id = "portfolio-second-row";
-  rows[2].id = "portfolio-third-row";
+  const img = document.createElement('img');
+  img.src = portfolio.img;
+  img.alt = `student logo for ${portfolio.name}`;
 
-  portfolioData.forEach((item, index) => {
-    const portfolioItem = createPortfolioItem(item);
-    if (index < 3) {
-      // add first three on first row
-      rows[0].appendChild(portfolioItem);
-    } else if (index < 6) {
-      // add next three on second row
-      rows[1].appendChild(portfolioItem);
-    } else {
-      // add rest three on third row
-      if (index === 7 || index === 9) {
-        // 8,10 are the execption
-        if (!rows[2].querySelector("#box9-box10-container")) {
-          const container = document.createElement("div");
-          container.id = "box9-box10-container";
-          rows[2].appendChild(container);
-        }
-        rows[2]
-          .querySelector("#box9-box10-container")
-          .appendChild(portfolioItem);
-      } else {
-        rows[2].appendChild(portfolioItem);
-      }
-    }
-  });
+  const link = document.createElement('a');
+  link.href = "#";
+  
+  const p = document.createElement('p');
+  p.textContent = portfolio.name;
 
-  rows.forEach((row) => portfolioContainer.appendChild(row));
+  link.appendChild(p);
+  portfolioBox.appendChild(img);
+  portfolioBox.appendChild(link);
+  portfolioInnerCon.appendChild(portfolioBox);
+});
 
-  const portfolioItems = document.querySelectorAll("#portfolio > div");
+// I declared them with let so, we can change the data later
+// let portfolioData = [
+//   { id: 1, image: "images/Portfolio1.png", name: "Hailie" },
+//   { id: 2, image: "images/Portfolio2.png", name: "Stephanie" },
+//   { id: 3, image: "images/Portfolio3.png", name: "Tanya" },
+//   { id: 4, image: "images/Portfolio4.png", name: "Joy" },
+//   { id: 5, image: "images/Portfolio5.png", name: "Henry" },
+//   { id: 6, image: "images/Portfolio6.png", name: "Nate" },
+//   { id: 7, image: "images/Portfolio7.png", name: "Keith" },
+//   { id: 8, image: "images/Portfolio8.png", name: "Conny" },
+//   { id: 9, image: "images/Portfolio9.png", name: "Sheldon" },
+//   { id: 10, image: "images/Portfolio10.png", name: "Maggie" },
+// ];
 
-  for (let i = 0; i < portfolioItems.length; i++) {
-    let t10 = gsap.timeline({
-      scrollTrigger: {
-        trigger: portfolioItems[i],
-        start: "top 100%",
-        end: "bottom 90%",
-        scrub: true,
-        markers: false,
-        toggleActions: "play none none reverse",
-      },
-    });
+// function createPortfolioItem(item) {
+//   const div = document.createElement('div');
+//   div.id = `portfolio-box${item.id}`;
+//   div.innerHTML = `
+//     <img src="${item.image}" alt="Portfolio student image ${item.id}" />
+//     <p><a href="#" onclick="return false;">${item.name}</a></p>
+//   `;
+//   return div;
+// }
 
-    t10.fromTo(
-      portfolioItems[i],
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.05,
-        duration: 0.2,
-        ease: "power2.in",
-      }
-    );
-  }
-}
+// function renderPortfolio() {
+//   // find the container element
+//   const portfolioContainer = document.getElementById("portfolio");
+//   //create three rows
+//   const rows = [
+//     document.createElement("div"),
+//     document.createElement("div"),
+//     document.createElement("div"),
+//   ];
 
-document.addEventListener("DOMContentLoaded", renderPortfolio);
+//   // give each row id
+//   rows[0].id = "portfolio-first-row";
+//   rows[1].id = "portfolio-second-row";
+//   rows[2].id = "portfolio-third-row";
+
+//   portfolioData.forEach((item, index) => {
+//     const portfolioItem = createPortfolioItem(item);
+//     if (index < 3) {
+//       // add first three on first row
+//       rows[0].appendChild(portfolioItem);
+//     } else if (index < 6) {
+//       // add next three on second row
+//       rows[1].appendChild(portfolioItem);
+//     } else {
+//       // add rest three on third row
+//       if (index === 7 || index === 9) {
+//         // 8,10 are the execption
+//         if (!rows[2].querySelector("#box9-box10-container")) {
+//           const container = document.createElement("div");
+//           container.id = "box9-box10-container";
+//           rows[2].appendChild(container);
+//         }
+//         rows[2]
+//           .querySelector("#box9-box10-container")
+//           .appendChild(portfolioItem);
+//       } else {
+//         rows[2].appendChild(portfolioItem);
+//       }
+//     }
+//   });
+
+//   rows.forEach((row) => portfolioContainer.appendChild(row));
+
+//   const portfolioItems = document.querySelectorAll("#portfolio > div");
+
+//   for (let i = 0; i < portfolioItems.length; i++) {
+//     let t10 = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: portfolioItems[i],
+//         start: "top 100%",
+//         end: "bottom 90%",
+//         scrub: true,
+//         markers: false,
+//         toggleActions: "play none none reverse",
+//       },
+//     });
+
+//     t10.fromTo(
+//       portfolioItems[i],
+//       {
+//         opacity: 0,
+//         y: 50,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         stagger: 0.05,
+//         duration: 0.2,
+//         ease: "power2.in",
+//       }
+//     );
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", renderPortfolio);
 
 //gsap animation
 
