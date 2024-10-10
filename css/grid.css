@@ -31,6 +31,7 @@ html {
   box-sizing: inherit;
 }
 
+
 /* ---Mini CSS reset--- */
 
 body,
@@ -91,6 +92,15 @@ h5 {
   font-style: normal;
   height: 300px;
 }
+
+#parallax-con {
+  overflow: hidden;
+	position: relative;
+	max-width: 100%;
+	margin: 0;
+  height: 100vh;
+}
+
 /* --- 2. Mobile Library Grid Styles --- */
 
 .full-width-grid-con {
