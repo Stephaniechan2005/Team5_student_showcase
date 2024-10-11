@@ -210,13 +210,13 @@ textarea {
   height: 100vh;
 
 }
-
+ /*
 #poster {
   overflow: hidden;
 	position: relative;
 	margin: 0;
   height: 1080px;
-}
+} */
 
 .layer {
   background-position:bottom center;
@@ -274,7 +274,7 @@ textarea {
 }
 
 .layer-4 {
-  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0),rgba(255, 255, 255, 1));
+  background-image: url(/images/parallax-4.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -322,6 +322,15 @@ textarea {
 }
 
 /* 4. ---Winning Projects--- */
+
+#winning-projects-con {
+  background-color: #FFFFFF;
+  padding-bottom: 55px;
+}
+
+#winning-projects-img {
+  /*opacity: 0;*/
+}
 #winning-projects-img h2 {
   margin-bottom: 45px;
   margin-top: 45px;
@@ -354,7 +363,7 @@ textarea {
 #testimonial {
   background-color: #efefef;
   display: block;
-  margin-top: 55px;
+  /* margin-top: 55px; */
   padding-bottom: 55px;
 }
 
@@ -385,6 +394,14 @@ textarea {
 }
 
 /* 8. ---Program Introduction--- */
+
+#program-introduction-con {
+  background-color: #FFFFFF;
+  padding-top: 50px;
+
+}
+
+
 #program-introduction-mid a {
   background-color: #c9261a;
   color: #fff;
@@ -571,9 +588,9 @@ textarea {
     margin-bottom: 20px;
   }
 
-  #program-introduction-con {
+  /*#program-introduction-con {
     margin: 45px 0;
-  }
+  }*/
 
   #program-introduction-img2 {
     display: none;
@@ -722,9 +739,10 @@ textarea {
   #winning-team {
     flex: 2;
   }
-  #program-introduction-con {
+  
+  /*#program-introduction-con {
     margin: 45px 0;
-  }
+  } */
 
   #program-introduction-img2 {
     display: none;
