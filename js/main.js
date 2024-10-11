@@ -7,7 +7,7 @@ const mobileMenu = document.querySelector("#mobile_dropdown_menu");
 //parallax
 const tl =gsap.timeline({
   scrollTrigger: {
-    trigger: "#poster",
+    trigger: "#parallax-con",
     start:"top top",
     end:"bottom top",
     scrub: true
