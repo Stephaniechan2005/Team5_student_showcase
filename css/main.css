@@ -210,11 +210,13 @@ textarea {
   height: 100vh;
 
 }
+ /*
 #poster {
   overflow: hidden;
 	position: relative;
 	margin: 0;
   height: 1080px;
+} */
 
 .layer {
   background-position:bottom center;
@@ -272,6 +274,7 @@ textarea {
 }
 
 .layer-4 {
+  background-image: url(/images/parallax-4.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
