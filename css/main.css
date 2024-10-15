@@ -204,11 +204,12 @@ textarea {
   position: relative;
   top: 0;
   left: 0;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   max-width: 100%;
   height: 100vh;
 }
+
 /*
 #poster {
   overflow: hidden;
@@ -217,12 +218,15 @@ textarea {
   height: 1080px;
 } */
 
+
+
 .layer {
-  background-position: bottom center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 1080px;
+  background-position:bottom center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 1080px;
+
   position: fixed;
   /*background-size: relative;*/
   z-index: -1;
@@ -260,14 +264,6 @@ textarea {
   background-size: contain;
 }
 
-.layer-3 {
-  background-image: url(/images/parallax-3.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  background-size: contain;
-}
 
 .layer-4 {
   background-image: url(/images/parallax-4.png);
@@ -551,6 +547,75 @@ textarea {
     display: none;
   }
 
+/*parallax*/
+.parallax {
+  margin-top: 50px;
+  position:relative;
+  top: 0; 
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  height: 60vh;
+
+}
+
+.layer {
+  background-position:bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1080px;
+  position: fixed;
+  /*background-size: relative;*/
+  z-index: -1;
+}
+
+.layer-bg {
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  position: fixed;
+  z-index: -1;
+  background-size: relative;
+  background:linear-gradient(-180deg, #E37167, #E37167 , #FFFFFF,#FFFFFF );
+}
+
+.layer-1 {
+  background-image: url(/images/parallax-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 30vh;
+  background-size: contain;
+
+}
+
+.layer-2 {
+  background-image: url(/images/parallax-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 30vh;
+  background-size: contain;
+  
+}
+
+
+.layer-4 {
+  background-image: url(/images/parallax-4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 36vh;
+  background-size: contain;
+
+}
+
   #poster {
     height: 200px; /* Further reduce height for very small screens */
   }
@@ -711,6 +776,74 @@ textarea {
     padding-right: 40px;
   }
 
+  /* parallax */
+  .parallax {
+    margin-top: 50px;
+    position:relative;
+    top: 0; 
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 60vh;
+  
+  }
+  
+  .layer {
+    background-position:bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    position: fixed;
+    /*background-size: relative;*/
+    z-index: -1;
+  }
+  
+  .layer-bg {
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    position: fixed;
+    z-index: -1;
+    background-size: relative;
+    background:linear-gradient(-180deg, #E37167, #E37167 , #FFFFFF,#FFFFFF );
+  }
+  
+  .layer-1 {
+    background-image: url(/images/parallax-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: 60vh;
+    background-size: contain;
+  
+  }
+  
+  .layer-2 {
+    background-image: url(/images/parallax-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: 60vh;
+    background-size: contain;
+    
+  }
+  
+  .layer-4 {
+    background-image: url(/images/parallax-4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    background-size: contain;
+  
+  }
+
   #video {
     padding-right: 40px;
   }
@@ -841,6 +974,74 @@ textarea {
   #industrial-night-left {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  /* parallax */
+  .parallax {
+    margin-top: 50px;
+    position:relative;
+    top: 0; 
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 100vh;
+  
+  }
+  
+  .layer {
+    background-position:bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1080px;
+    position: fixed;
+    /*background-size: relative;*/
+    z-index: -1;
+  }
+  
+  .layer-bg {
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: relative;
+    background:linear-gradient(-180deg, #E37167, #E37167 , #FFFFFF,#FFFFFF );
+  }
+  
+  .layer-1 {
+    background-image: url(/images/parallax-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-size: contain;
+  
+  }
+  
+  .layer-2 {
+    background-image: url(/images/parallax-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-size: contain;
+    
+  }
+  
+  .layer-4 {
+    background-image: url(/images/parallax-4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+  
   }
 
   #video {
