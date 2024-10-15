@@ -592,7 +592,7 @@ let t10 = gsap.timeline({
     start: "top 90%",
     end: "bottom 60%",
     scrub: true,
-    markers: true,
+    markers: false,
     toggleActions: "play reverse play reverse",
   },
 });
